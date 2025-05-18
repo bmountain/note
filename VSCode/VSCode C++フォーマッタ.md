@@ -1,9 +1,13 @@
-この文書にはVSCodeでclang-formatを使用する手順を説明します。
+VSCodeでclang-formatを使用する手順を説明します。
 MS製のC/C++ Extension Packのフォーマッタは動作しませんでした。
-そのためサードパーティの拡張機能を使用する方針となります。
+サードパーティの拡張機能を使用します。
 
-前提
+# 前提
 - WSL2で開発する
+
+# 使用するプラグイン
+- clang-format
+- Clang-Formt（VSCode拡張機能）
 
 # 準備
 開発環境にclang-formatをインストールする
@@ -16,18 +20,18 @@ sudo apt install clang-format
 作者：Xaver Hellauer
 識別子：xaver.clang-format
 
-適当なディレクトリに.clang-format設定ファイルを配置する
+WSLの適当なディレクトリに.clang-format設定ファイルを配置する
 
 # 拡張機能を設定する
 準備でインストールした拡張機能を設定する
-設定画面で`@ext:xaver.clang-format`と検索すればいい
-Remote \[WSL: Ubuntu\]タブを開き、以下の設定を行う
+設定画面で`@ext:xaver.clang-format`と検索する
+Remote \[WSL: Ubuntu\]タブを開き、以下設定する
 
 Clang-format: Executable
 clang-formatの実行可能ファイルのパスを書く
 
 Clang-fomrat: Fallback Style
-`none`と書く。.clang-formatファイル以外の形式でのフォーマットを予防するため。
+`none`と書く。.clang-formatファイル以外の形式でのフォーマットを防止するため。
 
 Clang-format: Style （最下部にあるはず）
 `file:`に続けて.clang-formatファイルのパスを記載：
@@ -54,7 +58,7 @@ Format On Save Mode
 既存コードに適用しない場合`modifications`を選択する
 
 # 念のための設定
-C/C++ Extension Packのフォーマッタが動作できないようにする
+C/C++ Extension Packのフォーマッタが動作しないようにする
 
 設定画面でclangと検索する
 Remote \[WSL: Ubuntu\]タブを開き、以下の設定を行う
