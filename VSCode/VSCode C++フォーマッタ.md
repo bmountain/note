@@ -6,8 +6,8 @@ MS製のC/C++ Extension Packのフォーマッタは動作しませんでした�
 - WSL2で開発する
 
 # 使用するプラグイン
-- clang-format
-- Clang-Formt（VSCode拡張機能）
+- clang-format （WSLにインストール）
+- Clang-Format（VSCode拡張機能）
 
 # 準備
 開発環境にclang-formatをインストールする
